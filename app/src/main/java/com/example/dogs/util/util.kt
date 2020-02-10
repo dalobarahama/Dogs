@@ -11,6 +11,9 @@ import com.example.dogs.R
 /**
  * Created by pengalatdite on 1/24/2020.
  */
+
+val PERMISSION_SEND_SMS = 123
+
 fun getProgressDrawable(context: Context): CircularProgressDrawable {
     return CircularProgressDrawable(context).apply {
         strokeWidth = 10f
