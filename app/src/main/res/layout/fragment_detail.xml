@@ -7,11 +7,16 @@
         <variable
                 name="detail"
                 type="com.example.dogs.model.DogBreed" />
+
+        <variable
+                name="palette"
+                type="com.example.dogs.model.DogPalette" />
     </data>
 
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@{palette.color}"
             android:padding="8dp"
             tools:context=".view.DetailFragment">
 
@@ -20,9 +25,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:imageUrl="@{detail.imageUrl}"
                 android:minHeight="200dp"
-                android:scaleType="fitCenter"
-                tools:src="@mipmap/ic_dog_icon" />
+                android:scaleType="fitCenter" />
 
         <TextView
                 android:id="@+id/dog_name"
@@ -32,7 +37,7 @@
                 android:layout_below="@id/dog_image"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="4dp"
-                tools:text="Dog Name" />
+                android:text="@{detail.dogBreed}" />
 
         <TextView
                 android:id="@+id/dog_purpose"
@@ -42,7 +47,7 @@
                 android:layout_below="@id/dog_name"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="4dp"
-                tools:text="Dog Name" />
+                android:text="@{detail.bredFor}" />
 
         <TextView
                 android:id="@+id/dog_temperament"
@@ -52,7 +57,7 @@
                 android:layout_below="@id/dog_purpose"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="4dp"
-                tools:text="Dog Temperament" />
+                android:text="@{detail.temperament}" />
 
         <TextView
                 android:id="@+id/dog_lifespan"
@@ -62,7 +67,7 @@
                 android:layout_below="@id/dog_temperament"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="4dp"
-                tools:text="Dog Lifespan" />
+                android:text="@{detail.lifeSpan}" />
 
 
     </RelativeLayout>
