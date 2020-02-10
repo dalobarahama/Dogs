@@ -15,6 +15,9 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+                android:id="@+id/actionSettings"
+                app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -32,4 +35,8 @@
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
+    <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.example.dogs.view.SettingsFragment"
+            android:label="SettingsFragment" />
 </navigation>
